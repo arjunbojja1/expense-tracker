@@ -20,8 +20,8 @@
         <td>{{ transaction[4] }}</td>
         <td>{{ transaction[5] }}</td>
         <td>
-            <a href="{{ url_for('main.edit_transaction', id=transaction[0]) }}" class="edit">Edit</a>
-            <a href="{{ url_for('main.delete_transaction', id=transaction[0]) }}" class="delete">Delete</a>            
+            <a href="{{ url_for('main.edit_transaction', id=transaction[0]) }}" class="button.edit">Edit</a>
+            <a href="{{ url_for('main.delete_transaction', id=transaction[0]) }}" class="button.delete">Delete</a>            
         </td>
     </tr>
     {% endfor %}
