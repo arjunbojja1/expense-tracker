@@ -52,7 +52,7 @@ expense_tracker/
 Clone the project to your local machine:
 ```bash
 git clone https://github.com/arjunbojja1/expense_tracker.git
-cd expense_tracker
+cd expense-tracker
 ```
 
 ### 3. Create a Virtual Environment
