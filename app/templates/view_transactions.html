@@ -20,10 +20,27 @@
         <td>{{ transaction[4] }}</td>
         <td>{{ transaction[5] }}</td>
         <td>
-            <a href="{{ url_for('main.edit_transaction', id=transaction[0]) }}" class="edit">Edit</a>
-            <a href="{{ url_for('main.delete_transaction', id=transaction[0]) }}" class="delete">Delete</a>            
+            <button class="edit" data-id="{{ transaction[0] }}">Edit</button>
+            <button class="delete" data-id="{{ transaction[0] }}">Delete</button>
         </td>
     </tr>
     {% endfor %}
 </table>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('button.edit').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                window.location.href = `{{ url_for('main.edit_transaction', id='') }}${id}`;
+            });
+        });
+
+        document.querySelectorAll('button.delete').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                window.location.href = `{{ url_for('main.delete_transaction', id='') }}${id}`;
+            });
+        });
+    });
+</script>
 {% endblock %}
