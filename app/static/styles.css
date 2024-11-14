@@ -93,21 +93,25 @@ form button:hover {
 }
 
 button.edit, button.delete {
-    background-color: #ffc107;
     color: white;
     border: none;
     cursor: pointer;
     margin: 0.25em;
     padding: 0.5em 1em;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button.edit {
+    background-color: #17a2b8;
+}
+
+button.edit:hover {
+    background-color: #138496;
 }
 
 button.delete {
     background-color: #dc3545;
-}
-
-button.edit:hover {
-    background-color: #e0a800;
 }
 
 button.delete:hover {
@@ -117,4 +121,14 @@ button.delete:hover {
 .chart-container {
     margin-top: 2em;
     text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
