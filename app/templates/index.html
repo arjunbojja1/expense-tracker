@@ -2,4 +2,30 @@
 {% block content %}
 <h1>Welcome to the Expense Tracker</h1>
 <p>Track your expenses easily and efficiently.</p>
+<div class="chart-container">
+    <canvas id="expenseChart"></canvas>
+</div>
+<script>
+    const ctx = document.getElementById('expenseChart').getContext('2d');
+    const expenseChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Income', 'Expense'],
+            datasets: [{
+                label: 'Amount',
+                data: [income, expense],
+                backgroundColor: ['#28a745', '#dc3545'],
+                borderColor: ['#28a745', '#dc3545'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}

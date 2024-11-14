@@ -91,3 +91,30 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+
+button.edit, button.delete {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0.25em;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+button.delete {
+    background-color: #dc3545;
+}
+
+button.edit:hover {
+    background-color: #e0a800;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}
+
+.chart-container {
+    margin-top: 2em;
+    text-align: center;
+}
