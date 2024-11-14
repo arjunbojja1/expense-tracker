@@ -51,7 +51,7 @@ expense_tracker/
 ### 2. Clone the Repository
 Clone the project to your local machine:
 ```bash
-git clone https://github.com/yourusername/expense_tracker.git
+git clone https://github.com/arjunbojja1/expense_tracker.git
 cd expense_tracker
 ```
 
